@@ -1,10 +1,11 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import imageMin from 'vite-plugin-imagemin'
+import compression from 'vite-plugin-compression'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(),imageMin()],
+  plugins: [react(),imageMin(),compression()],
   server: {
     port: 8080,
     https: false,
